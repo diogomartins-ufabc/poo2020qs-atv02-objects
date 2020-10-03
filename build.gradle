@@ -21,6 +21,9 @@ repositories {
     // Use jcenter for resolving dependencies.
     // You can declare any Maven/Ivy/file repository here.
     jcenter()
+    flatDir {
+        dirs 'lib'
+    }
 }
 
 dependencies {
@@ -29,6 +32,8 @@ dependencies {
 
     // Use JUnit Jupiter Engine for testing.
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
+
+    implementation name: 'stdlib'
 }
 
 test {
@@ -44,5 +49,5 @@ checkstyle {
 pmd {
     toolVersion = "6.26.0"
     consoleOutput = true
-    ruleSetFiles "config/pmd_poo.xml"
+    ruleSets = ["config/pmd_poo.xml"]
 }
