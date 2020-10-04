@@ -49,5 +49,6 @@ checkstyle {
 pmd {
     toolVersion = "6.26.0"
     consoleOutput = true
-    ruleSets = ["config/pmd_poo.xml"]
+    ruleSets = []
+    ruleSetFiles = files("config/pmd_poo.xml")
 }
